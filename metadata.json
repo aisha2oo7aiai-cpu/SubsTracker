@@ -1,0 +1,8 @@
+{
+  "name": "SUBSCRIBELY — Premium Subscription Management Platform",
+  "description": "Enterprise subscription management platform for companies to manage services, plans, customers, staff, quotations, invoices, payments, and recurring revenue.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

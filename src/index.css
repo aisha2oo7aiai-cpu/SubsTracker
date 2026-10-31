@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Host Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* 8B Template Palette */
+  --color-primary: #1b1411;       /* Espresso */
+  --color-secondary: #1f3954;     /* Navy */
+  --color-tertiary: #33cc7a;      /* Active / Action Green */
+  --color-surface: #faf5f0;       /* Warm Paper */
+  --color-surface-deep: #eee5dc;  /* Deeper Paper */
+  --color-caption: #66574f;       /* Muted brown */
+  --color-navy-text: #bacde0;     /* Pale ice blue on navy */
+  --color-night: #2e241f;         /* Night dark brown */
+  --color-muted-dark: #b8aba3;    /* Tan on dark */
+
+  /* Aliases for UI coherence */
+  --color-espresso: #1b1411;
+  --color-paper: #faf5f0;
+  --color-paper-deep: #eee5dc;
+  --color-action-green: #33cc7a;
+  --color-brand-navy: #1f3954;
+
+  /* Rainbow Button Theme Extensions */
+  --color-color-1: hsl(var(--color-1));
+  --color-color-2: hsl(var(--color-2));
+  --color-color-3: hsl(var(--color-3));
+  --color-color-4: hsl(var(--color-4));
+  --color-color-5: hsl(var(--color-5));
+  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+}
+
+:root {
+  --color-primary: #1b1411;
+  --color-secondary: #1f3954;
+  --color-tertiary: #33cc7a;
+  --color-surface: #faf5f0;
+  --color-surface-deep: #eee5dc;
+  --color-caption: #66574f;
+  --color-navy-text: #bacde0;
+  --color-night: #2e241f;
+  --color-muted-dark: #b8aba3;
+
+  /* Rainbow Button HSL variables */
+  --color-1: 153 60% 50%;
+  --color-2: 210 46% 23%;
+  --color-3: 18 24% 9%;
+  --color-4: 153 60% 50%;
+  --color-5: 209 46% 80%;
+  --primary-foreground: 18 24% 9%;
+}
+
+* {
+  font-family: 'Host Grotesk', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #faf5f0;
+  color: #1b1411;
+  font-family: 'Host Grotesk', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* 8B Style Radii Classes */
+.rounded-sheet {
+  border-radius: 56px;
+}
+.rounded-t-sheet {
+  border-top-left-radius: 56px;
+  border-top-right-radius: 56px;
+}
+.rounded-card {
+  border-radius: 28px;
+}
+.rounded-bubble {
+  border-radius: 20px;
+}
+.rounded-field {
+  border-radius: 14px;
+}
+
+/* 8B Style Buttons */
+.btn-8b-primary {
+  background-color: #33cc7a;
+  color: #1b1411;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  padding: 14px 26px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 12px 28px -12px rgba(51, 204, 122, 0.65);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-8b-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px -10px rgba(51, 204, 122, 0.75);
+}
+
+.btn-8b-dark {
+  background-color: #1b1411;
+  color: #faf5f0;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  padding: 14px 26px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-8b-dark:hover {
+  background-color: #2e241f;
+  transform: translateY(-1px);
+}
+
+.btn-8b-compact {
+  background-color: #33cc7a;
+  color: #1b1411;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  padding: 10px 20px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 8px 20px -8px rgba(51, 204, 122, 0.55);
+  transition: all 0.2s ease;
+}
+.btn-8b-compact:hover {
+  transform: translateY(-1px);
+}
+
+/* Custom scrollbar matching paper & espresso theme */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #eee5dc;
+}
+::-webkit-scrollbar-thumb {
+  background: #b8aba3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #66574f;
+}
